@@ -3,8 +3,45 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>LTI</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+        .loader {
+          display: block;
+        }
+        .loader-msg {
+          text-align: center;
+          padding-top: 50px;
+        }
+        .loader-img {
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+                  border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+          margin: auto;
+        }
+        
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        
+        </style>       
     </head>
     <body>
+        <div class="loader">
+        <h1 class="loader-msg">Launching the external resource.. </h1>
+        <div class="loader-img"></div>
+        </div>
         ## This form will be hidden.
         ## LTI module JavaScript will trigger a "submit" on the form, and the
         ## result will be rendered instead.
